@@ -28,10 +28,10 @@
 #
 class placement(
   $ensure_package                  = 'present',
-  $sync_db                         = true,
-  $state_path                      = $::os_service_default,
-  $randomize_allocation_candidates = $::os_service_default,
-  $allocation_conflict_retry_count = $::os_service_default,
+  Boolean $sync_db                 = true,
+  $state_path                      = $facts['os_service_default'],
+  $randomize_allocation_candidates = $facts['os_service_default'],
+  $allocation_conflict_retry_count = $facts['os_service_default'],
 ) inherits placement::params {
 
   include placement::deps

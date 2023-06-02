@@ -43,12 +43,13 @@
 #   Defaults to undef
 #
 class placement::api (
-  $enabled                      = true,
-  $manage_service               = true,
+  Boolean $enabled              = true,
+  Boolean $manage_service       = true,
   $api_service_name             = $::placement::params::service_name,
   $package_ensure               = 'present',
-  $sync_db                      = false,
+  Boolean $sync_db                      = false,
   $enable_proxy_headers_parsing = $::os_service_default,
+  $enable_proxy_headers_parsing = $facts['os_service_default'],
   # DEPRECATED PARAMETERS
   $host                         = undef,
   $port                         = undef,
