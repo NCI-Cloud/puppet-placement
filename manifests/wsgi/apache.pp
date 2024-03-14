@@ -114,8 +114,8 @@ class placement::wsgi::apache (
   $ssl_crl_path              = undef,
   $ssl_crl                   = undef,
   $ssl_certs_dir             = undef,
-  $access_log_file           = false,
-  $access_log_format         = false,
+  $access_log_file           = undef,
+  $access_log_format         = undef,
   $error_log_file            = undef,
   $vhost_custom_fragment     = undef,
   # DEPRECATED PARAMETERS
